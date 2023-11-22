@@ -9,6 +9,9 @@ out/
 
 # Docs
 docs/
+node_modules/
 
 # Dotenv file
 .env
+.Ds_Store
+
