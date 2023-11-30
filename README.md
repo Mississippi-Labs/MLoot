@@ -15,52 +15,19 @@ https://book.getfoundry.sh/
 
 ## Usage
 
-### Build
+### Set .env
+You should write a `.env` file first to set the default informations of the project
 
-```shell
-$ forge build
+In general , the following should be inside the `.env` file:
 ```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
+PRIVATE_KEY=your private key
+LOCAL_RPC=http://localhost:8545
+MSSP_RPC=http://rpc.0xMssp.xyz
 ```
 
 ### Deploy
 
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+```bash
+forge script script/deploy.s.sol:CounterScript --rpc-url http://rpc.0xMssp.xyz --broadcast
 ```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+When you deploy the contract to mssp testnet, you can use the MSSP_RPC, if you are going to deploy in the local testnet,you can change the rpc-url 
